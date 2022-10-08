@@ -1,0 +1,114 @@
+﻿@model _04_Data.Datos.pelicula
+
+<h4 style="text-align: center; font-size: 24px; font-family: 'Neue Haas Grotesk Text Pro'; text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87">@Html.DisplayFor(model => model.titulo)</h4>
+<hr />
+
+<div class="container">
+    <div class="row align-items-center">
+        <div align="center" class="col-lg-12">
+            <span>Titulo:</span>
+            <span>@Html.DisplayFor(model => model.titulo)</span>
+        </div>
+
+        <div align="center" class="col-lg-12">
+            <span>Fecha de lanzamiento:</span>
+            <span>@Html.DisplayFor(model => model.añolanzamiento)</span>
+            <br />
+            <span>Duración:</span>
+            <span>@Html.DisplayFor(model => model.duracion)</span>
+            <br />
+            <span>Clasificación:</span>
+            <span>@Html.DisplayFor(model => model.clasificacion)</span>
+            <br />
+            <span>Presupuesto:</span>
+            <span>@Html.DisplayFor(model => model.presupuesto)</span>
+            <br />
+            <span>Recaudación:</span>
+            <span>@Html.DisplayFor(model => model.recaudacion)</span>
+            <br />
+            @*<span>Premios:</span>
+                <span>@Html.DisplayFor(model => model.premios)</span>
+                <br />
+                <span>Protagonista:</span>
+                <span>@Html.DisplayFor(model => model.actor.actor_principal)</span>
+                <br />
+                <span>Compañia:</span>
+                <span>@Html.DisplayFor(model => model.companyia.nombre)</span>
+                <br />
+                <span>Director:</span>
+                <span>@Html.DisplayFor(model => model.director.nombre)</span>
+                <br />
+                <span>Genero:</span>
+                <span>@Html.DisplayFor(model => model.genero.nombre)</span>*@
+        </div>
+
+    </div>
+
+</div>
+@{
+    string onClickAnterior = "pelicula(" + Model.id + "," + 0 + ")";
+    string onClickSiguiente = "pelicula(" + Model.id + "," + 1 + ")";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <input class="bg-primary" type="button" value="Anterior" style="float:left" onclick=@onClickAnterior>
+            <input class="bg-primary" type="button" value="Siguiente" style="float:right" onclick=@onClickSiguiente>
+        </div>
+    </div>
+</div>
+
+
+@*</div>
+    <br />
+    <div class="col-lg-12">
+        <span>Sinopsis:</span>
+        <span>@Html.DisplayFor(model => model.sinopsis)</span>
+    </div>
+    <br />
+
+    <br />
+    <div class="col-lg-3">
+        <span>Duración:</span>
+        <span>@Html.DisplayFor(model => model.duracion)</span>
+    </div>
+
+    <div class="col-lg-3">
+        <span>Clasificación:</span>
+        <span>@Html.DisplayFor(model => model.clasificacion)</span>
+    </div>
+
+    <div class="col-lg-3">
+        <span>Presupuesto:</span>
+        <span>@Html.DisplayFor(model => model.presupuesto)</span>
+    </div>
+
+    <div class="col-lg-3">
+        <span>Recaudación:</span>
+        <span>@Html.DisplayFor(model => model.recaudacion)</span>
+    </div>
+
+    <div class="col-lg-12">
+        <span>Premios:</span>
+        <span>@Html.DisplayFor(model => model.premios)</span>
+    </div>
+    <br />
+    <br />
+    <div class="col-lg-3">
+        <span>Protagonista:</span>
+        <span>@Html.DisplayFor(model => model.actor.actor_principal)</span>
+    </div>
+
+    <div class="col-lg-3">
+        <span>Compañia:</span>
+        <span>@Html.DisplayFor(model => model.companyia.nombre)</span>
+    </div>
+
+    <div class="col-lg-3">
+        <span>Director:</span>
+        <span>@Html.DisplayFor(model => model.director.nombre)</span>
+    </div>
+
+    <div class="col-lg-3">
+        <span>Genero:</span>
+        <span>@Html.DisplayFor(model => model.genero.nombre)</span>*@
